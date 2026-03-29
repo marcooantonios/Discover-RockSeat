@@ -73,10 +73,12 @@ body * {
   transform: translateY(-10%);
   z-index: 1;
   
+
+  animation: slide-out 0.4s;
 }
 
 .light #switch button {
-  transform: translate(34px, -10%);
+  animation: slide-in 0.4s forwards;
 }
 
 #switch span{
@@ -159,3 +161,21 @@ footer {
   }
 }
 
+/* Animation */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}
